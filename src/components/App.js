@@ -1,5 +1,6 @@
 import React from 'react';
 import ScreenPanel from './ScreenPanel';
+import ButtonPanel from './ButtonPanel';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,9 +16,7 @@ class App extends React.Component {
           Calculator App created by Jimmyis
         </div>
         <ScreenPanel />
-        <div id="button-panel">
-          This is buttons panel
-        </div>
+        <ButtonPanel />
       </div>
     );
   }
