@@ -11,6 +11,10 @@ class App extends React.Component {
     };
   }
 
+  whenClick = (buttonName) => {
+    this.setState({total: buttonName})
+  }
+
   render() {
     return (
       <div className="component-app">
@@ -18,7 +22,7 @@ class App extends React.Component {
           Calculator App created by Jimmyis
         </div>
         <ScreenPanel value={this.state.next || this.state.total || '0'}/>
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.whenClick}/>
       </div>
     );
   }
