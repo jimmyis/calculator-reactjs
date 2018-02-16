@@ -1,4 +1,5 @@
 import React from 'react';
+import Buttons from './Buttons';
 
 class ButtonPanel extends React.Component {
   render() {
@@ -7,33 +8,33 @@ class ButtonPanel extends React.Component {
         This is button panel
         <div>
           <div>
-            <div class="button">AC</div>
-            <div class="button">+/-</div>
-            <div class="button">%</div>
-            <div class="button">÷</div>
+            <Buttons name="AC" />
+            <Buttons name="+/-" />
+            <Buttons name="%" />
+            <Buttons name="÷" />
           </div>
           <div>
-            <div class="button">7</div>
-            <div class="button">8</div>
-            <div class="button">9</div>
-            <div class="button">x</div>
+            <Buttons name="7" />
+            <Buttons name="8" />
+            <Buttons name="9" />
+            <Buttons name="x" />
           </div>
           <div>
-            <div class="button">4</div>
-            <div class="button">5</div>
-            <div class="button">6</div>
-            <div class="button">-</div>
+            <Buttons name="4" />
+            <Buttons name="5" />
+            <Buttons name="6" />
+            <Buttons name="-" />
           </div>
           <div>
-            <div class="button">1</div>
-            <div class="button">2</div>
-            <div class="button">3</div>
-            <div class="button">+</div>
+            <Buttons name="1" />
+            <Buttons name="2" />
+            <Buttons name="3" />
+            <Buttons name="+" />
           </div>
           <div>
-            <div class="button">0</div>
-            <div class="button">.</div>
-            <div class="button">=</div>
+            <Buttons name="0" />
+            <Buttons name="." />
+            <Buttons name="=" />
           </div>
         </div>
       </div>
