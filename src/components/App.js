@@ -55,9 +55,13 @@ function calc (state, button) {
     return { operation: button }
   }
 
+  // If there's a number pending in `toCalculate` state
+  //  so the operator button will be save `operation` state 
+  //  and `toCalculate` state will be shift to `total` state
+  //  then set `toCalculate` state to null again
   return {
-    total: button,
-    toCalculate: button,
+    total: state.toCalculate,
+    toCalculate: null,
     operation: button,
   }
 }
