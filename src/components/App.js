@@ -126,6 +126,13 @@ function calc (state, button) {
     return { total: '0.' };
   }
 
+  // Logic 3.3: `+/-` Plus/Minus button
+  //   if `+/-` Plus/Minus button was pressed
+  //     return empty object to do nothing
+  if (button === '+/-') {
+    return {};
+  }
+
   // Logic 1: State checking
   // If there's no operation yet
   //   and If input button is not a number but an operator,
