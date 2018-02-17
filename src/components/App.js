@@ -40,7 +40,7 @@ function calc (state, button) {
   if(checkNumber(button)) {
     console.log(button + ' is a number')
 
-    // Logic 2.1: 0 buttons
+    // Logic 2.1: `0` button
     //   If button is number 0 and `toCalculate` state is also 0
     //   so return blank object.
     if (button === '0' && state.toCalculate === '0') {
