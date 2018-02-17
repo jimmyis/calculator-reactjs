@@ -39,6 +39,7 @@ function calc (state, button) {
     console.log(button + ' is a number')
   }
 
+  // Logic 3: Operator buttons
   // Will set all state to null, as intend to be All Clear (AC)
   if (button === 'AC') {
     return {
