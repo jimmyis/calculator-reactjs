@@ -59,6 +59,17 @@ function calc (state, button) {
       return { toCalculate: button };
     }
 
+    // Logic 2.4: If no operation pending
+    //   If `operation` state is not existed,
+    //     return `toCalculate` state with concatnate numbers
+    //     and `total` state with null.
+    if (state.toCalculate) {
+      return {
+        toCalculate: state.toCalculate + button,
+        total: null,
+      };
+    }
+
     // Logic 2.2: return a new state
     //  as button (number) to be `toCalculate` state
     //  and set `total` state to null
