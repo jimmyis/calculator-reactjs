@@ -91,7 +91,10 @@ function calc (state, button) {
   }
 }
 
-// Check Number function to Check if an input character is a number
+// Check Number helper function 
+//   to Check if an input character is a number
+//   by match the input with `String.prototype.match()` method
+//   and expect to return `true` or `false` (using `cast-to-bool` aka `!!` )
 function checkNumber(input) {
   return !!input.match(/[0-9]+/);
 }
