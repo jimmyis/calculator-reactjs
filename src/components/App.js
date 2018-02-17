@@ -35,6 +35,8 @@ export default App;
 function calc (state, button) {
 
   // Logic 2: Number buttons
+  //  check if a pressed button is a number
+  //  by using `checkNumber()` helper function
   if(checkNumber(button)) {
     console.log(button + ' is a number')
 
