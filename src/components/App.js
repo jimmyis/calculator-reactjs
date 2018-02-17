@@ -47,10 +47,15 @@ function calc (state, button) {
       return {}
     }
 
-    // Logic 2.3: If operation is pending
+    // Logic 2.3: If operation pending
     //   If `operation` state existed,
     //    return number to `toCalculate` state
+    //   or if `toCalculate` state exist, 
+    //   update `toCalculate` state with concatnate numbers
     if (state.operation) {
+      if (state.toCalculate) {
+        return { toCalculate: state.toCalculate + button };
+      }
       return { toCalculate: button };
     }
 
