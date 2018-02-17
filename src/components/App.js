@@ -47,12 +47,23 @@ function calc (state, button) {
   }
 
   // Logic 1: No operation yet
+  // If input button is not a number but an operator,
 
-  // If input button is not a number but an operator, 
+  // Logic 1.1
   //   and there's no any number pending in `toCalculate` state
   //   just add math operator to the `operation` state
   if (!state.toCalculate) {
     return { operation: button }
+  }
+
+  // Logic 1.2
+  //   and if there is any number existing in `toCalculate` state
+  if (state.operation) {
+    return {
+      total: operate(state.total, state.toCalculate, state.operation),
+      toCalculate: null,
+      operation: button,
+    };
   }
 
   // If there's a number pending in `toCalculate` state
@@ -77,4 +88,7 @@ function operate(number1st, number2st, operator) {
   //  when `number1st` expected to be summary amount of calculation or initial number (0)
   //  `number2nd` expected to be newly added number to operate (`toCalculate` from the state)
   //  and `operator` should be a math operator
+  
+  let total = null
+  return total
 }
