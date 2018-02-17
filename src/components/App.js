@@ -147,11 +147,17 @@ function calc (state, button) {
 
   // Logic 3.4: `=` Equals button
   //   if `=` equals button was pressed
-  //      but no `toCalculate` and `operation` state existed
-  //        so return empty object (do nothing)
+  //     return `total` state with calculated value using `operate` function
+  //       and set `toCalculate` and `operation` state to null
+  //     but no `toCalculate` and `operation` state existed
+  //       so return empty object (do nothing)
   if (button === '=') {
     if (state.toCalculate && state.operation) {
-      return {}
+      return {
+        total: operate(state.total, state.toCalculate, state.operation),
+        toCalculate: null,
+        operation: null,
+      }
     } else {
       return {}
     }
