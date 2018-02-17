@@ -145,6 +145,18 @@ function calc (state, button) {
     return {};
   }
 
+  // Logic 3.4: `=` Equals button
+  //   if `=` equals button was pressed
+  //      but no `toCalculate` and `operation` state existed
+  //        so return empty object (do nothing)
+  if (button === '=') {
+    if (state.toCalculate && state.operation) {
+      return {}
+    } else {
+      return {}
+    }
+  }
+
   // Logic 1: State checking
   // If there's no operation yet
   //   and If input button is not a number but an operator,
