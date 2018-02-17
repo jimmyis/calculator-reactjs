@@ -1,4 +1,5 @@
 import React from 'react';
+import Decimal from 'decimal.js';
 import ScreenPanel from './ScreenPanel';
 import ButtonPanel from './ButtonPanel';
 
@@ -205,12 +206,27 @@ function checkNumber(input) {
 }
 
 // Operate function, to operate between summary amount of calculation and new number, return operated number
-function operate(number1st, number2st, operator) {
+function operate(number1st, number2nd, operator) {
   // should return operated result of `number1st` with `number2nd`
   //  when `number1st` expected to be summary amount of calculation or initial number (0)
   //  `number2nd` expected to be newly added number to operate (`toCalculate` from the state)
   //  and `operator` should be a math operator
   
-  let total = null
-  return total
+  const first = new Decimal(number1st)
+  const second = new Decimal(number2nd)
+  if (operator === '+') {
+    return first.plus(second).toString()
+  }
+  if (operator === '-') {
+    return first.minus(second).toString()
+  }
+  if (operator === 'x') {
+    return first.times(second).toString()
+  }
+  if (operator === '÷') {
+    return first.div(second).toString()
+  }
+  if (operator === '%') {
+    return first.mod(second).toString()
+  }
 }
