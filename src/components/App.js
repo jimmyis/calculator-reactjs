@@ -49,7 +49,9 @@ function calc (state, button) {
   }
 
   // Logic 3: Operator buttons
-  // Will set all state to null, as intend to be All Clear (AC)
+  
+  // Logic 3.1: `AC` button
+  //  set all state to null, as intend to be All Clear (AC)
   if (button === 'AC') {
     return {
       total: null,
