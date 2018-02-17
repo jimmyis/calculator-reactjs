@@ -46,6 +46,15 @@ function calc (state, button) {
     }
   }
 
+  // Logic 1: No operation yet
+
+  // If input button is not a number but an operator, 
+  //   and there's no any number pending in `toCalculate` state
+  //   just add math operator to the `operation` state
+  if (!state.toCalculate) {
+    return { operation: button }
+  }
+
   return {
     total: button,
     toCalculate: button,
