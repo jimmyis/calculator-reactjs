@@ -37,11 +37,20 @@ function calc (state, button) {
     console.log(button + ' is a number')
   }
 
+  // Will set all state to null, as intend to be All Clear (AC)
+  if (button === 'AC') {
+    return {
+      total: null,
+      toCalculate: null,
+      operation: null,
+    }
+  }
+
   return {
     total: button,
     toCalculate: button,
     operation: button,
-  };
+  }
 }
 
 // Check Number function to Check if an input character is a number
