@@ -47,6 +47,13 @@ function calc (state, button) {
       return {}
     }
 
+    // Logic 2.3: If operation is pending
+    //   If `operation` state existed,
+    //    return number to `toCalculate` state
+    if (state.operation) {
+      return { toCalculate: button };
+    }
+
     // Logic 2.2: return a new state
     //  as button (number) to be `toCalculate` state
     //  and set `total` state to null
