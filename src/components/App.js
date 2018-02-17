@@ -33,6 +33,8 @@ export default App;
 
 // Main Calculation function, return a new state set
 function calc (state, button) {
+
+  // Logic 2: Number buttons
   if(checkNumber(button)) {
     console.log(button + ' is a number')
   }
