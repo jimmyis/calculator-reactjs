@@ -49,8 +49,9 @@ function calc (state, button) {
     }
   }
 
-  // Logic 1: No operation yet
-  // If input button is not a number but an operator,
+  // Logic 1: State checking
+  // If there's no operation yet
+  //   and If input button is not a number but an operator,
   
   // Logic 1.2
   //   and if there is any number existing in `toCalculate` state
