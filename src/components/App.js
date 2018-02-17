@@ -33,11 +33,18 @@ export default App;
 
 // Calculation function
 function calc (state, button) {
-  console.log(button)
-  
+  if(checkNumber(button)) {
+    console.log(button + ' is a number')
+  }
+
   return {
     total: button,
     toCalculate: button,
     operation: button,
   };
+}
+
+// Check Number function to Check if an input character is a number
+function checkNumber(input) {
+  return !!input.match(/[0-9]+/);
 }
