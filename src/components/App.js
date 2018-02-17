@@ -129,7 +129,13 @@ function calc (state, button) {
   // Logic 3.3: `+/-` Plus/Minus button
   //   if `+/-` Plus/Minus button was pressed
   //     return empty object to do nothing
+  //    but if `toCalculate` state existed
+  //     convert number in `toCalculate` state to be negative
+  //     and return value as a string to `toCalculate` state.
   if (button === '+/-') {
+    if (state.toCalculate) {
+      return { toCalculate: (-1 * parseFloat(state.toCalculate)).toString() };
+    }
     return {};
   }
 
