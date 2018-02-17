@@ -97,7 +97,12 @@ function calc (state, button) {
   if (button === '.') {
     // if `total` state is pending,
     //   add `.` point to `total state
+    // but if `total` state has `.` point existed
+    //   just return empty object to do nothing.
     if (state.total) {
+      if (state.total.includes('.')) {
+        return {};
+      }
       return { total: state.total + '.' };
     }
     return { total: '0.' };
