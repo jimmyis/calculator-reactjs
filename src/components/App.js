@@ -2,6 +2,7 @@ import React from 'react';
 import Decimal from 'decimal.js';
 import ScreenPanel from './ScreenPanel';
 import ButtonPanel from './ButtonPanel';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="component-app">
+      <div className="app-component">
         <div id="app-name">
           Calculator App created by Jimmyis { this.toCalculate }
         </div>

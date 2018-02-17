@@ -1,5 +1,6 @@
 import React from 'react';
 import Buttons from './Buttons';
+import './ButtonPanel.css'
 
 class ButtonPanel extends React.Component {
   whenClick = (buttonsName) => {
@@ -8,7 +9,7 @@ class ButtonPanel extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="buttonpanel-component">
         This is button panel
         <div>
           <div>

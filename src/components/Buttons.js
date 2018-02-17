@@ -1,4 +1,5 @@
 import React from 'react';
+import './Buttons.css'
 
 class Buttons extends React.Component {
   whenClick = () => {
@@ -7,7 +8,7 @@ class Buttons extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="buttons-component">
         <button onClick={this.whenClick}>
           {this.props.name}
         </button>
