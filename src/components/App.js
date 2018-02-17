@@ -91,6 +91,13 @@ function calc (state, button) {
     }
   }
 
+  // Logic 3.2: `.` point button
+  //  if there is no states, and point button was pressed, 
+  //    add `0.` to `total` state
+  if (button === '.') {
+    return { total: '0.' };
+  }
+
   // Logic 1: State checking
   // If there's no operation yet
   //   and If input button is not a number but an operator,
