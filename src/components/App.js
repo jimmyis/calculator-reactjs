@@ -132,9 +132,15 @@ function calc (state, button) {
   //    but if `toCalculate` state existed
   //     convert number in `toCalculate` state to be negative
   //     and return value as a string to `toCalculate` state.
+  //    or if `total` state existed
+  //     convert number in `total` state to be negative
+  //     and return value as a string to `total` state.
   if (button === '+/-') {
     if (state.toCalculate) {
       return { toCalculate: (-1 * parseFloat(state.toCalculate)).toString() };
+    }
+    if (state.total) {
+      return { total: (-1 * parseFloat(state.total)).toString() };
     }
     return {};
   }
