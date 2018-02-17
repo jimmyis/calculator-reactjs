@@ -98,7 +98,12 @@ function calc (state, button) {
 
     // if `toCalculate` state is pending
     //   add `.` point after number in `toCalculate` state and return
+    //  but if `toCalculate` state has `.` point existed
+    //   so just return empty object to do nothing.
     if (state.toCalculate) {
+      if (state.toCalculate.includes('.')) {
+        return {};
+      }
       return { toCalculate: state.toCalculate + '.' };
     }
 
