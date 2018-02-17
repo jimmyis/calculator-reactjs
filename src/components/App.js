@@ -49,3 +49,10 @@ function checkNumber(input) {
   return !!input.match(/[0-9]+/);
 }
 
+// Operate function, to operate between summary amount of calculation and new number, return operated number
+function operate(number1st, number2st, operator) {
+  // should return operated result of `number1st` with `number2nd`
+  //  when `number1st` expected to be summary amount of calculation or initial number (0)
+  //  `number2nd` expected to be newly added number to operate (`toCalculate` from the state)
+  //  and `operator` should be a math operator
+}
