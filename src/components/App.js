@@ -31,7 +31,7 @@ class App extends React.Component {
 }
 export default App;
 
-// Calculation function
+// Main Calculation function, return a new state set
 function calc (state, button) {
   if(checkNumber(button)) {
     console.log(button + ' is a number')
@@ -48,3 +48,4 @@ function calc (state, button) {
 function checkNumber(input) {
   return !!input.match(/[0-9]+/);
 }
+
