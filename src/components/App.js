@@ -95,6 +95,11 @@ function calc (state, button) {
   //  if there is no states, and point button was pressed, 
   //    add `0.` to `total` state
   if (button === '.') {
+    // if `total` state is pending,
+    //   add `.` point to `total state
+    if (state.total) {
+      return { total: state.total + '.' };
+    }
     return { total: '0.' };
   }
 
