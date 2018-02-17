@@ -44,7 +44,15 @@ function calc (state, button) {
     //   If button is number 0 and `toCalculate` state is also 0
     //   so return blank object.
     if (button === '0' && state.toCalculate === '0') {
-      return {};
+      return {}
+    }
+
+    // Logic 2.2: return a new state
+    //  as button (number) to be `toCalculate` state
+    //  and set `total` state to null
+    return {
+      toCalculate: button,
+      total: null,
     }
   }
 
