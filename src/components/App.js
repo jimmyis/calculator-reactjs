@@ -37,6 +37,13 @@ function calc (state, button) {
   // Logic 2: Number buttons
   if(checkNumber(button)) {
     console.log(button + ' is a number')
+
+    // Logic 2.1: 0 buttons
+    //   If button is number 0 and `toCalculate` state is also 0
+    //   so return blank object.
+    if (button === '0' && state.toCalculate === '0') {
+      return {};
+    }
   }
 
   // Logic 3: Operator buttons
